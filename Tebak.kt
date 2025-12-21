@@ -29,12 +29,16 @@ fun main(){
       println("pilih ulang")
     }
   }
-  println("oke kesempatanmu ada $a, coba tebak dari 1 sampai $ssss")
+  println("oke kesempatanmu ada $a, coba tebak dari 1 sampai $ssss,ketik 0 untuk nyerah")
   var angka: Int = (1..ssss).random()
   while (true){
     println("masukin tebakanmu")
     try {
      var jawab = readln().toInt()
+     if (jawab == 0){
+       println("cupu, jawabannya $angka,cepet banget nyerahnya")
+       break
+     }
      if (jawab == angka){
        println("kamu benar")
        break
